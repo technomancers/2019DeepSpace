@@ -1,12 +1,11 @@
 package edu.frc.technomancers.robot
 
-import edu.frc.technomancers.robot.commands.DriveWithJoystick
-import edu.wpi.first.wpilibj.IterativeRobot
+import edu.wpi.first.wpilibj.TimedRobot
 import edu.wpi.first.wpilibj.command.Scheduler
 
-class Robot : IterativeRobot() {
+//CHANGE TO TimeBasedRobot
+class Robot : TimedRobot() {
     override fun robotInit() {
-        Scheduler.getInstance().add(DriveWithJoystick())
     }
 
     override fun robotPeriodic() {
