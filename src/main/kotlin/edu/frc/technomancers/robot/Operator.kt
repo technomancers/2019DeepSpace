@@ -1,8 +1,7 @@
 package edu.frc.technomancers.robot
 
-import edu.frc.technomancers.utilities.Controller
+import edu.wpi.first.wpilibj.XboxController
 
-object Operator{
-    //TODO: USE WPILIB's Controller
-    val drivingController = Controller(0)
+object Operator {
+    val drivingController = XboxController(0)
 }
