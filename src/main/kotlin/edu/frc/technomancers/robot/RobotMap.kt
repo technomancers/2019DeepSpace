@@ -12,7 +12,9 @@ object RobotMap {
 
     val RIGHT_MOTOR_2: Int
 
+    val CLAMP_MOTOR: Int
 
+    val CLAMP_SPEED: Double
     init {
         LEFT_MOTOR_1 = pref.getInt("leftOne", 0)
 
@@ -21,5 +23,9 @@ object RobotMap {
         LEFT_MOTOR_2 = pref.getInt("leftTwo", 0)
 
         RIGHT_MOTOR_2 = pref.getInt("rightTwo", 0)
+
+        CLAMP_MOTOR = pref.getInt("clampMotor", 0)
+
+        CLAMP_SPEED = pref.getDouble("clampSpeed", 0.0)
     }
 }

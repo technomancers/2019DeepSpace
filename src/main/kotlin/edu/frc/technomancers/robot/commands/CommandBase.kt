@@ -5,5 +5,6 @@ import edu.wpi.first.wpilibj.command.Command
 abstract class CommandBase : Command() {
     companion object {
        val driveTrain = DriveTrain()
+       val clamp = Clamp()
     }
 }
