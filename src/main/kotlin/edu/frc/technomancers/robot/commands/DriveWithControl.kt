@@ -3,6 +3,7 @@ package edu.frc.technomancers.robot.commands
 import edu.frc.technomancers.robot.Operator
 import edu.wpi.first.wpilibj.XboxController
 import edu.wpi.first.wpilibj.GenericHID
+import edu.frc.technomancers.robot.RobotMap
 
 
 class DriveWithControl: CommandBase(){
@@ -17,8 +18,14 @@ class DriveWithControl: CommandBase(){
     }
 
     override fun execute() {
-        driveTrain.tankDrive(Operator.drivingController.getY(GenericHID.Hand.kLeft), 
-            Operator.drivingController.getY(GenericHID.Hand.kRight))
+        if(RobotMap.getDriveType() == RobotMap.DriveType.ARCADE ){
+            driveTrain.arcadeDrive(Operator.drivingController.getY(GenericHID.Hand.kLeft), 
+                Operator.drivingController.getX(GenericHID.Hand.kRight), true)
+        }
+        if(RobotMap.getDriveType() == RobotMap.DriveType.TANK ){
+            driveTrain.tankDrive(Operator.drivingController.getY(GenericHID.Hand.kLeft), 
+                Operator.drivingController.getY(GenericHID.Hand.kRight))
+        }
     }
 
     override fun end(){

@@ -8,8 +8,6 @@ import edu.wpi.first.wpilibj.command.Subsystem
 import edu.wpi.first.wpilibj.drive.DifferentialDrive
 import edu.wpi.first.wpilibj.SpeedControllerGroup
 
-
-
 class DriveTrain: Subsystem()
 {
     private var leftMotorOne = WPI_TalonSRX(RobotMap.LEFT_MOTOR_1)
@@ -27,6 +25,9 @@ class DriveTrain: Subsystem()
 
     fun tankDrive(left: Double, right: Double) {
         diffDrive.tankDrive(-1*left, -1*right)
+    }
+    fun arcadeDrive(x: Double, rot: Double, squareInputs: Boolean){
+        diffDrive.arcadeDrive(-1*x, rot, squareInputs)
     }
 
 }
