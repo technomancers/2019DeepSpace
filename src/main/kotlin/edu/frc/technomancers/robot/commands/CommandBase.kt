@@ -6,5 +6,7 @@ abstract class CommandBase : Command() {
     companion object {
        val driveTrain = DriveTrain()
        val clamp = Clamp()
+       val robotlift = RobotLift()
+       val armLift = ArmLift()
     }
 }

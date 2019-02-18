@@ -18,6 +18,9 @@ object RobotMap {
     val RIGHT_MOTOR_2: Int
     val CLAMP_MOTOR: Int
     val CLAMP_SPEED: Double
+    val LIFT_MOTOR: Int
+    val PUSH_MOTOR: Int
+    val PUSH_SPEED: Double
 
     init {
         LEFT_MOTOR_1 = pref.getInt("leftOne", 0)
@@ -26,6 +29,9 @@ object RobotMap {
         RIGHT_MOTOR_2 = pref.getInt("rightTwo", 0)
         CLAMP_MOTOR = pref.getInt("clampMotor", 0)
         CLAMP_SPEED = pref.getDouble("clampSpeed", 1.0)
+        LIFT_MOTOR = pref.getInt("liftMotor", 0)
+        PUSH_MOTOR = pref.getInt("pushMotor", 0)
+        PUSH_SPEED = pref.getDouble("pushSpeed", 1.0)
         driveChooser.setDefaultOption("Arcade", DriveType.ARCADE)
         driveChooser.addOption("Tank", DriveType.TANK)
     }
