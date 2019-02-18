@@ -15,7 +15,7 @@ class WorkLift: CommandBase(){
         //Multiply by .5 to slow it down
         speed -= Operator.drivingController.getTriggerAxis(GenericHID.Hand.kLeft)
         speed += Operator.drivingController.getTriggerAxis(GenericHID.Hand.kRight)
-        robotLift.setLiftSpeed(speed)
+        armLift.setLiftSpeed(speed)
     }
 
     override fun isFinished(): Boolean {

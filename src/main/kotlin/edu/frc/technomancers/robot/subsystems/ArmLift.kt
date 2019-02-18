@@ -7,7 +7,7 @@ import edu.frc.technomancers.robot.commands.MovingArms
 import edu.wpi.first.wpilibj.command.Subsystem
 
 class ArmLift: Subsystem(){
-    private val robotLiftMotor = TalonSRX(RobotMap.LIFT_MOTOR)
+    private val armLiftMotor = TalonSRX(RobotMap.LIFT_MOTOR)
 
     init {
     }
@@ -17,6 +17,6 @@ class ArmLift: Subsystem(){
     }
 
     fun setLiftSpeed(Speed: Double){
-        robotLiftMotor.set(ControlMode.PercentOutput, Speed)
+        armLiftMotor.set(ControlMode.PercentOutput, Speed)
     }
 }
