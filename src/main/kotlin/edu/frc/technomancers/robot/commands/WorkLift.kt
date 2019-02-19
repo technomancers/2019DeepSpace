@@ -13,8 +13,12 @@ class WorkLift: CommandBase(){
     override fun execute() {
         var speed = 0.0
         //Multiply by .5 to slow it down
-        speed -= Operator.drivingController.getXButton()
-        speed += Operator.drivingController.getYButton()
+        if(Operator.drivingController.getXButton()){
+          speed -= 1
+        }
+        if(Operator.drivingController.getYButton()){
+            speed += 1
+        }
         robotLift.setPushSpeed(speed)
     }
 

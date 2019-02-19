@@ -4,7 +4,7 @@ import edu.frc.technomancers.robot.Operator
 import edu.wpi.first.wpilibj.XboxController
 import edu.wpi.first.wpilibj.GenericHID
 
-class WorkLift: CommandBase(){
+class MovingArms: CommandBase(){
     private var isFinished = false
     init {
         requires(armLift)
