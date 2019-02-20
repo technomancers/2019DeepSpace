@@ -17,6 +17,6 @@ class ArmLift: Subsystem(){
     }
 
     fun setLiftSpeed(Speed: Double){
-        armLiftMotor.set(ControlMode.PercentOutput, Speed)
+        armLiftMotor.set(ControlMode.PercentOutput, RobotMap.LIFT_RATIO * Speed)
     }
 }

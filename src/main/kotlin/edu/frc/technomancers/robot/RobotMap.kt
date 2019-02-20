@@ -19,6 +19,7 @@ object RobotMap {
     val CLAMP_MOTOR: Int
     val CLAMP_SPEED: Double
     val LIFT_MOTOR: Int
+    val LIFT_RATIO: Double
     val PUSH_MOTOR: Int
     val PUSH_SPEED: Double
 
@@ -30,6 +31,7 @@ object RobotMap {
         CLAMP_MOTOR = pref.getInt("clampMotor", 0)
         CLAMP_SPEED = pref.getDouble("clampSpeed", 1.0)
         LIFT_MOTOR = pref.getInt("liftMotor", 0)
+        LIFT_RATIO = pref.getDouble("liftRatio", 0.55)
         PUSH_MOTOR = pref.getInt("pushMotor", 0)
         PUSH_SPEED = pref.getDouble("pushSpeed", 1.0)
         driveChooser.setDefaultOption("Arcade", DriveType.ARCADE)
